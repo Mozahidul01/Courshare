@@ -1,0 +1,25 @@
+import { categories } from "../data";
+import Category from "./Category";
+
+export default function CategoriesContainer() {
+  return (
+    <div className="section">
+      <div className="text-center">
+        <div className="sm:text-3xl text-2xl font-bold mb-5">
+          Our Top <span className="text-teal">Categories</span>
+        </div>
+        <p className="text-sm text-gray leading-7 max-w-2xl mx-auto">
+          Explore the many possibilities for personal and professional growth.
+          With courses taught by expert instructors, you can trust that
+          you&apos;re getting high-quality education, no matter what your goals
+          may be. So why wait? Start learning today!
+        </p>
+      </div>
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 mt-12 gap-8">
+        {categories.map((category) => (
+          <Category key={category.id} {...category} />
+        ))}
+      </div>
+    </div>
+  );
+}
