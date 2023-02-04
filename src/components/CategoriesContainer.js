@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { categories } from "../data";
+import { categories } from "../Data/data";
 import Category from "./Category";
 
 export default function CategoriesContainer() {

@@ -23,10 +23,7 @@ export default function AboutContainer() {
               exciting world of online courses!
             </p>
           </div>
-          <Link
-            to="about"
-            className="font-semibold px-6 py-3 rounded-md border border-gray text-sm hover:bg-gray hover:text-white hover:ring-2 hover:ring-offset-2 hover:ring-gray transition-all ease-out duration-300"
-          >
+          <Link to="about" className="btn-secondary">
             Learn More
           </Link>
         </div>

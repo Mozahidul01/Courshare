@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HiMenuAlt1, HiOutlineX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { navLinks } from "../data";
+import { navLinks } from "../Data/data";
 import MobileNavlinks from "./MobileNavlinks";
 import NavLinks from "./NavLinks";
 
@@ -30,10 +30,7 @@ export default function Header() {
             <NavLinks key={navLink.id} {...navLink} />
           ))}
         </div>
-        <Link
-          to="sign-up"
-          className="font-bold tracking-wider text-sm px-6 py-2 rounded-md border border-gray  hover:bg-gray hover:text-white hover:ring-2 hover:ring-offset-2 hover:ring-gray transition-all ease-out duration-300"
-        >
+        <Link to="sign-up" className="btn-secondary">
           Sign Up
         </Link>
         {toggle && (

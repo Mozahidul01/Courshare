@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import hero from "../assets/hero.png";
-import { logos } from "../data";
+import { logos } from "../Data/data";
 
 export default function HeroContainer() {
   const container = {
@@ -29,7 +29,6 @@ export default function HeroContainer() {
       <div className="md:flex items-center justify-center">
         <div>
           <div className="font-bold text-xs text-teal mb-4">
-            {" "}
             Your e-learning partner
           </div>
           <div className="sm:text-4xl text-3xl uppercase font-bold">
@@ -40,19 +39,10 @@ export default function HeroContainer() {
             and lifetime access.
           </p>
           <div className="mt-6">
-            <Link
-              to="log-in"
-              className="relative inline-flex items-center justify-start px-6 py-3 mr-4 overflow-hidden text-sm transition-all bg-teal rounded-md hover:bg-teal group"
-            >
-              <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-200 transition-all border-gray rounded-md" />
-              <span className="relative w-full text-white transition-colors duration-250 ease-in-out group-hover:text-white">
-                Get Started
-              </span>
+            <Link to="log-in" className="btn-primary">
+              Get Started
             </Link>
-            <Link
-              to="courses"
-              className="font-semibold px-6 py-2.5 rounded-md border border-gray text-sm hover:bg-gray hover:text-white hover:ring-2 hover:ring-offset-2 hover:ring-gray transition-all ease-out duration-300"
-            >
+            <Link to="courses" className="btn-secondary">
               Discover
             </Link>
           </div>

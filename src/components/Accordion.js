@@ -11,13 +11,15 @@ export default function Accordion({ id, question, answer }) {
 
   return (
     <div className="pb-8">
-      <div className="flex items-center justify-between">
+      <div
+        className="flex cursor-pointer items-center justify-between"
+        onClick={() => handleClick(id)}
+      >
         <div className="sm:text-xl text-base font-bold">{question}</div>
         <BsChevronDown
           className={`${
             id === activeIndex ? "rotate-180" : "rotate-0"
           } cursor-pointer transition-all duration-300 text-xl`}
-          onClick={() => handleClick(id)}
         />
       </div>
       <AnimatePresence>

@@ -1,4 +1,4 @@
-import { accordions } from "../data";
+import { accordions } from "../Data/data";
 import Accordion from "./Accordion";
 
 export default function AccordionsContainer() {

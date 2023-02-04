@@ -24,6 +24,50 @@
     animation: mymove 2.5s infinite;
   }
 
+  .btn-primary {
+    @apply px-6 py-3 mr-4 text-sm transition-all text-white bg-teal/90 rounded-md;
+  }
+
+  .btn-primary:hover {
+    @apply bg-teal;
+  }
+
+  .btn-secondary {
+    @apply font-semibold px-6 py-2.5 rounded-md border border-gray text-sm transition-all ease-out duration-300;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-gray text-white ring-2 ring-offset-2 ring-gray;
+  }
+
+  .form-input {
+    @apply block w-full px-4 py-2 mt-2 text-teal bg-white border border-gray rounded-md
+  }
+
+  .form-input:focus {
+    @apply border-teal ring-hummingBird outline-none ring ring-opacity-40
+  }
+
+  .form-btn {
+    @apply w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-teal rounded-md
+  }
+
+  .form-btn:hover {
+    @apply bg-teal/90
+  }
+
+  .icon-btn {
+    @apply flex items-center justify-center w-full p-2 border border-gray rounded-md cursor-pointer
+  }
+
+  .icon-btn:hover {
+    @apply bg-gray text-white
+  }
+
+  .icon-btn:focus {
+    @apply ring-2 ring-offset-1 ring-hummingBird
+  }
+
   @keyframes mymove {
     33% {
       top: 0px;
