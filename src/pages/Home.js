@@ -4,6 +4,7 @@ import CategoriesContainer from "../components/CategoriesContainer";
 import CourseContainer from "../components/CourseContainer";
 import InstructorContainer from "../components/InstructorContainer";
 import AccordionsContainer from "../components/AccordionsContainer";
+import Newslatter from "../components/Newslatter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CourseContainer />
       <InstructorContainer />
       <AccordionsContainer />
+      <Newslatter />
     </div>
   );
 }
