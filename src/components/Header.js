@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HiMenuAlt1, HiOutlineX } from "react-icons/hi";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { navLinks } from "../data";
 import MobileNavlinks from "./MobileNavlinks";
@@ -36,7 +37,12 @@ export default function Header() {
           Sign Up
         </Link>
         {toggle && (
-          <div className="fixed h-screen w-96 top-0 left-0 z-20 bg-teal text-xl text-white flex flex-col justify-center items-center shadow-md gap-8 py-8">
+          <motion.div
+            initial={{ x: -500, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="fixed h-screen w-96 top-0 left-0 z-20 bg-teal text-xl text-white flex flex-col justify-center items-center shadow-md gap-8 py-8"
+          >
             {navLinks.map((navLink) => (
               <MobileNavlinks
                 key={navLink.id}
@@ -48,7 +54,7 @@ export default function Header() {
               className="absolute right-12 top-12 text-3xl cursor-pointer"
               onClick={handleToggle}
             />
-          </div>
+          </motion.div>
         )}
       </div>
     </div>

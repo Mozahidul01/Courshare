@@ -1,7 +1,23 @@
+import { motion } from "framer-motion";
 import { categories } from "../data";
 import Category from "./Category";
 
 export default function CategoriesContainer() {
+  const container = {
+    hidden: {
+      opacity: 0,
+      scale: 0,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <div className="section">
       <div className="text-center">
@@ -15,11 +31,16 @@ export default function CategoriesContainer() {
           may be. So why wait? Start learning today!
         </p>
       </div>
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 mt-12 gap-8">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className="grid md:grid-cols-4 sm:grid-cols-2 mt-12 gap-8"
+      >
         {categories.map((category) => (
           <Category key={category.id} {...category} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
