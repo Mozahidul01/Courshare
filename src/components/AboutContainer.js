@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import aboutImg from "../assets/about.jpg";
 
-export default function AboutContainer() {
+export default function AboutContainer({ title, description, btnTo, btnText }) {
   return (
     <div className="section">
       <div className="grid md:grid-cols-2 gap-6 place-items-center">
@@ -9,23 +9,21 @@ export default function AboutContainer() {
           <img src={aboutImg} alt="about-img" className="p-4" />
         </div>
         <div>
-          <div className="font-bold sm:text-3xl text-2xl mb-5">
-            Learn Anywhere, Anytime
-            <br /> with <span className="text-teal">Our Online Courses</span>
+          <div className="font-bold text-teal sm:text-3xl text-2xl mb-5">
+            {title}
           </div>
           <div className="text-sm text-gray leading-6 mb-8">
-            With our online format, you can learn at your own pace, from
-            anywhere in the world, on any device. Whether you&apos;re a busy
-            professional looking to fit learning into your schedule, or just
-            someone who loves to learn, our platform has something for everyone.
+            {description}
             <p className="font-medium text-stone-900 mt-4">
               So why wait? Start your learning journey today and explore the
               exciting world of online courses!
             </p>
           </div>
-          <Link to="about" className="btn-secondary">
-            Learn More
-          </Link>
+          {btnText && (
+            <Link to={btnTo} className="btn-secondary">
+              {btnText}
+            </Link>
+          )}
         </div>
       </div>
     </div>

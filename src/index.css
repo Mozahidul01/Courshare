@@ -25,11 +25,11 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 mr-4 text-sm transition-all text-white bg-teal/90 rounded-md;
+    @apply px-6 py-3 mr-4 text-sm transition-all text-white font-semibold bg-teal rounded-md;
   }
 
   .btn-primary:hover {
-    @apply bg-teal;
+    @apply bg-hummingBird text-black;
   }
 
   .btn-secondary {
@@ -49,11 +49,11 @@
   }
 
   .form-btn {
-    @apply w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-teal rounded-md
+    @apply w-full px-4 py-2 tracking-wide text-white font-semibold transition-colors duration-200 transform bg-teal rounded-md
   }
 
   .form-btn:hover {
-    @apply bg-teal/90
+    @apply bg-hummingBird text-black;
   }
 
   .icon-btn {

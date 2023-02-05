@@ -23,8 +23,8 @@ export const navLinks = [
   },
   {
     id: 3,
-    to: "services",
-    name: "Services",
+    to: "instrutors",
+    name: "Instrutors",
   },
   {
     id: 4,
