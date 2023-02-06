@@ -25,7 +25,7 @@ export default function HeroContainer() {
   };
 
   return (
-    <div className="section">
+    <div className="section py-20">
       <div className="md:flex items-center justify-center">
         <div>
           <div className="font-bold text-xs text-teal mb-4">

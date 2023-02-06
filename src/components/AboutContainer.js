@@ -3,7 +3,7 @@ import aboutImg from "../assets/about.jpg";
 
 export default function AboutContainer({ title, description, btnTo, btnText }) {
   return (
-    <div className="section">
+    <div className="section py-16">
       <div className="grid md:grid-cols-2 gap-6 place-items-center">
         <div className="border-4 border-teal rounded-md">
           <img src={aboutImg} alt="about-img" className="p-4" />

@@ -19,7 +19,7 @@ export default function CategoriesContainer() {
   };
 
   return (
-    <div className="section">
+    <div className="section py-16">
       <div className="text-center">
         <div className="sm:text-3xl text-2xl font-bold mb-5">
           Our Top <span className="text-teal">Categories</span>

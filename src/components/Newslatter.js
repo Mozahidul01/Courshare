@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Newslatter() {
   return (
-    <div className="section">
+    <div className="section py-12">
       <div className="text-center max-w-xl mx-auto">
         <div className="sm:text-3xl text-2xl font-bold mb-5">
           Subscribe to Our <span className="text-teal">Newsletter</span>

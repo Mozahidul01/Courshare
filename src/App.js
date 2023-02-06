@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Layouts/Root";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Instrutors from "./pages/Instrutors";
+import Instructor from "./pages/Instructor";
 import Courses from "./pages/Courses";
 import Dashboard from "./pages/Dashboard";
 import SignUp from "./pages/SignUp";
@@ -25,8 +25,8 @@ export default function App() {
           element: <About />,
         },
         {
-          path: "instrutors",
-          element: <Instrutors />,
+          path: "instructor",
+          element: <Instructor />,
         },
         {
           path: "courses",

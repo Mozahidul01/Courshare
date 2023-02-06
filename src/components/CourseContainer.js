@@ -1,18 +1,12 @@
-import { courses } from "../Data/data";
-import Course from "./Course";
+import CourseCard from "./CourseCard";
 
-export default function CourseContainer() {
+export default function CourseContainer({ courses }) {
   return (
-    <div className="section">
-      <div className="text-3xl font-bold">
-        Our Most <span className="text-teal">Popular Courses</span>
-      </div>
-      <div className="relative mt-12 overflow-x-hidden w-full">
-        <div className="flex gap-8 md:w-full sm:w-[170%] xs:w-[340%] w-[480%]  animate-slide">
-          {courses.map((course) => (
-            <Course key={course.id} {...course} />
-          ))}
-        </div>
+    <div className="section py-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-6">
+        {courses.map((course) => (
+          <CourseCard key={course.id} {...course} />
+        ))}
       </div>
     </div>
   );

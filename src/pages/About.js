@@ -4,14 +4,11 @@ import CTAContainer from "../components/CTAContainer";
 import faqImg from "../assets/faq.svg";
 import ctaImg1 from "../assets/cta-team.png";
 import ctaImg2 from "../assets/cta-course.png";
+import PageHeader from "../components/PageHeader";
 export default function About() {
   return (
     <div>
-      <div className="bg-gradient-to-r from-teal to-hummingBird">
-        <p className="text-4xl sm:text-5xl py-16 text-center font-bold text-white">
-          About Us
-        </p>
-      </div>
+      <PageHeader title="About Us" />
       <div>
         <AboutContainer
           title="Our Incredible Journey "
