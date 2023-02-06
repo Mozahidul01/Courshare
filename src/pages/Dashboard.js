@@ -1,3 +1,9 @@
+import Maintenance from "../components/Maintenance";
+
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <Maintenance />
+    </div>
+  );
 }

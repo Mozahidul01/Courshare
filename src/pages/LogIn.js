@@ -21,7 +21,7 @@ export default function LogIn() {
   };
 
   return (
-    <div className="section">
+    <div className="section py-16">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-bold text-center text-teal uppercase">
           Log In

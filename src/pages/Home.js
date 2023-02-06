@@ -26,7 +26,7 @@ export default function Home() {
         <p className="text-3xl font-bold">
           Our Most <span className="text-teal">Popular Courses</span>
         </p>
-        <CourseContainer courses={course3} />
+        <CourseContainer courses={course3} home="true" />
         <div className="flex justify-center">
           <Link to="/courses" className="btn-secondary">
             See More

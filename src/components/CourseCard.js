@@ -8,6 +8,7 @@ export default function CourseCard({
   instructor,
   rating,
   price,
+  home,
 }) {
   return (
     <div className="p-2 shadow-md bg-white rounded-md">
@@ -33,7 +34,10 @@ export default function CourseCard({
           <p className="text-normal font-bold">
             <span className="text-teal">Price: </span> ${price}
           </p>
-          <Link to={title} className="btn-secondary">
+          <Link
+            to={home ? `courses/${title} ` : `${title}`}
+            className="btn-secondary"
+          >
             See details
           </Link>
         </div>

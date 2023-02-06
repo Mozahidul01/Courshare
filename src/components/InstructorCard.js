@@ -1,8 +1,12 @@
 import { AiOutlineFile } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function InstructorCard({ img, name, designation, courses }) {
   return (
-    <div className="bg-white shadow-md rounded-md sm:my-2 group overflow-hidden cursor-pointer w-fit">
+    <Link
+      to={name}
+      className="bg-white shadow-md rounded-md sm:my-2 group overflow-hidden cursor-pointer w-fit"
+    >
       <div className="overflow-hidden">
         <img
           className="duration-200 ease-in-out group-hover:scale-110 w-fit"
@@ -21,6 +25,6 @@ export default function InstructorCard({ img, name, designation, courses }) {
           <p>Course: {courses}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

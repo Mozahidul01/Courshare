@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
 import NotFound from "./pages/NotFound";
+import Maintenance from "./components/Maintenance";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -29,8 +30,16 @@ export default function App() {
           element: <Instructor />,
         },
         {
+          path: "instructor/:name",
+          element: <Maintenance />,
+        },
+        {
           path: "courses",
           element: <Courses />,
+        },
+        {
+          path: "courses/:tittle",
+          element: <Maintenance />,
         },
         {
           path: "dashboard",
