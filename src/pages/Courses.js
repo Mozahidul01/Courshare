@@ -9,7 +9,7 @@ export default function Courses() {
     <div>
       <PageHeader title="Our Courses" />
       <CourseContainer courses={courses} />
-      <div className="container mx-auto my-6">
+      <div className="container mx-auto my-6 px-4">
         <CTAContainer
           subtitle="Learn From Our Platform"
           title="That Take You Next Level"

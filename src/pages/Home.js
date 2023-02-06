@@ -23,7 +23,7 @@ export default function Home() {
       <CategoriesContainer />
 
       <div className="container mx-auto my-16">
-        <p className="text-3xl font-bold">
+        <p className="text-3xl font-bold px-4">
           Our Most <span className="text-teal">Popular Courses</span>
         </p>
         <CourseContainer courses={course3} home="true" />

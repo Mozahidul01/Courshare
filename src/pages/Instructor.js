@@ -8,7 +8,7 @@ export default function Instructor() {
     <div>
       <PageHeader title="Our Instructor" />
       <InstructorContainer />
-      <div className="container mx-auto my-6">
+      <div className="container mx-auto my-6 px-4">
         <CTAContainer
           subtitle="Learn From Our Platform"
           title="That Take You Next Level"
