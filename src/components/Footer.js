@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <section className="bg-teal text-white">
+    <section className="bg-hummingBird font-medium">
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           <div className="px-5 py-2">
@@ -35,7 +35,7 @@ export default function Footer() {
           <a
             href="https://fb.me/mozahidulislam01/"
             target="_blank"
-            className="text-blue-300 hover:text-gray"
+            className="text-blue-700 hover:text-gray"
             rel="noreferrer"
           >
             <FaFacebook className="w-6 h-6" />
@@ -43,7 +43,7 @@ export default function Footer() {
           <a
             href="https://instagram.com/mozahidul01"
             target="_blank"
-            className="text-pink-300 hover:text-gray"
+            className="text-pink-500 hover:text-gray"
             rel="noreferrer"
           >
             <FaInstagram className="w-6 h-6" />
@@ -51,7 +51,7 @@ export default function Footer() {
           <a
             href="https://github.com/mozahidul01"
             target="_blank"
-            className="text-gray-900 hover:text-gray"
+            className="text-black hover:text-gray"
             rel="noreferrer"
           >
             <FaGithub className="w-6 h-6" />
@@ -59,7 +59,7 @@ export default function Footer() {
           <a
             href="https://linkedin.com/in/mozahidul01"
             target="_blank"
-            className="text-blue-300 hover:text-gray"
+            className="text-blue-800 hover:text-gray"
             rel="noreferrer"
           >
             <FaLinkedin className="w-6 h-6" />
