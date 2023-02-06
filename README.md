@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Coushare (Online Course Platform)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+- [The challenge](#the-challenge)
+- [Links](#links)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Future Plan](#future-plan)
+- [Useful resources](#useful-resources)
+- [Author](#author)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Courseshare is an online course platform that offers a wide range of high-quality educational opportunities to individuals around the world. With Courshare, users can access a vast library of courses covering a diverse range of subjects, from programming and data science to design, marketing, and more. The platform is designed to provide an interactive, engaging, and flexible learning experience for all students, whether they are just starting out or looking to advance their careers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Make sure website is Responsive
+- Show hover states for all interactive elements on the page
+- Make reusable components
+- Have to create data and show that on the website
+- Have to use a CSS framework/library
+- Use React Router
 
-### `npm test`
+### Links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Solution URL: [https://github.com/programming-hero-web-course2/b6-quiz-crackerz-Mozahidul01]
 
-### `npm run build`
+- Live Site URL: [https://courshare.netlify.app/]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React Js
+- Tailwind CSS
+- React Router
+- React Icons
+- Framer Motion
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What I learned
 
-### `npm run eject`
+I have used Framer Motion for the first time to develop any website. It was a fantastic learning experience for me. Framer Motion taught me a lot. This project also greatly aids my understanding of design. It was an enjoyable learning experience for me.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Future Plan
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the future, I'll add a few features. Users will eventually be able to take quizzes from some courses. I will also implement authentication. Users who are logged in can also access their dashboard and account information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Useful resources
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [React Router](https://reactrouter.com/en/main) - For routing I have used React-router-dom.
+- [TailwindCSS doc](https://tailwindcss.com/docs) - This Document help me to understand Tailwind CSS.
+- [React Icon](https://react-icons.github.io/react-icons) - I have used this Icon pack in this project.
+- [Framer Motion](https://www.framer.com/motion/) - I have used this package to create animation.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [https://mozahidul01.showwcase.com/]
+- LinkdIn - [https://www.linkedin.com/in/mozahidul01]
+- Github - [https://github.com/mozahidul01]
