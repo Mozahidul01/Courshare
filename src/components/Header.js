@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { HiMenuAlt1, HiOutlineX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { navLinks } from "../Data/data";
 import MobileNavlinks from "./MobileNavlinks";
 import NavLinks from "./NavLinks";
+import { AuthContext } from "../contexts/UserContex";
+import { FaUserCircle } from "react-icons/fa";
+import UserModal from "./UserModal";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
@@ -13,9 +16,12 @@ export default function Header() {
     setToggle(!toggle);
   };
 
+  //User Data From Context API
+  const { user } = useContext(AuthContext);
+
   return (
-    <div className="sticky w-full top-0 left-0 z-20 backdrop-blur-md bg-white/50 ">
-      <div className="container p-2 mx-auto flex items-center justify-between">
+    <div className="sticky w-full top-0 left-0 z-20 backdrop-blur-md bg-white/50">
+      <div className="container p-2 mx-auto flex items-center justify-between min-h-[3.5rem]">
         <div className="flex items-center gap-4">
           <HiMenuAlt1
             className="text-3xl md:hidden cursor-pointer"
@@ -30,9 +36,20 @@ export default function Header() {
             <NavLinks key={navLink.id} {...navLink} />
           ))}
         </div>
-        <Link to="sign-up" className="btn-secondary">
-          Sign Up
-        </Link>
+
+        {user?.email ? (
+          <div className="relative">
+            <label htmlFor="my-modal" className="cursor-pointer">
+              <FaUserCircle className="w-7 h-7" />
+            </label>
+            <UserModal />
+          </div>
+        ) : (
+          <Link to="log-in" className="btn-action">
+            Log In
+          </Link>
+        )}
+
         {toggle && (
           <motion.div
             initial={{ x: -500, opacity: 0 }}

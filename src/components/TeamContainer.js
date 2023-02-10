@@ -10,7 +10,7 @@ export default function TeamContainer({ title, description, btnTo, btnTitle }) {
             {title}
           </div>
           <p className="text-sm leading-6 text-gray mb-6">{description}</p>
-          <Link to={btnTo} className="btn-primary">
+          <Link to={btnTo} className="btn-more">
             {btnTitle}
           </Link>
         </div>

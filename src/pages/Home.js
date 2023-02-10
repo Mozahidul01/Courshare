@@ -28,7 +28,7 @@ export default function Home() {
         </p>
         <CourseContainer courses={course3} home="true" />
         <div className="flex justify-center">
-          <Link to="/courses" className="btn-secondary">
+          <Link to="/courses" className="btn-action">
             See More
           </Link>
         </div>

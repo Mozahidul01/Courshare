@@ -1,9 +1,24 @@
+import { useContext } from "react";
 import { FaGoogle, FaFacebookF, FaGithub } from "react-icons/fa";
+import { AuthContext } from "../contexts/UserContex";
 
 export default function FormIcons() {
+  const { signInWithGoogle } = useContext(AuthContext);
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((res) => {
+        const user = res.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="flex mt-4 gap-x-2">
-      <button type="button" className="icon-btn">
+      <button type="button" onClick={handleGoogleSignIn} className="icon-btn">
         <FaGoogle className="w-5 h-5" />
       </button>
       <button className="icon-btn">

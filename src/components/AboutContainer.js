@@ -20,7 +20,7 @@ export default function AboutContainer({ title, description, btnTo, btnText }) {
             </p>
           </div>
           {btnText && (
-            <Link to={btnTo} className="btn-secondary">
+            <Link to={btnTo} className="btn-more">
               {btnText}
             </Link>
           )}

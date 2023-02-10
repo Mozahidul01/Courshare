@@ -1,50 +1,95 @@
-import { useState } from "react";
-import { loginFields } from "../Data/formField";
+import { useContext, useState } from "react";
 import FormInput from "../components/FormInput";
 import FormAction from "../components/FormAction";
 import FormExtra from "../components/FormExtra";
 import FormIcons from "../components/FormIcons";
-
-const fields = loginFields;
-let fieldsState = {};
-fields.forEach((field) => (fieldsState[field.id] = ""));
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexts/UserContex";
 
 export default function LogIn() {
-  const [loginState, setLoginState] = useState(fieldsState);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loding, setLoding] = useState("");
 
-  const handleChange = (e) => {
-    setLoginState({ ...loginState, [e.target.id]: e.target.value });
-  };
+  const { logIn } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const form = e.target;
+
+    //Input fields validate
+    if (!email || !password) {
+      setError("All fields are required");
+      return;
+    }
+
+    const passwordRegex = "^(?=.*?[a-z])(?=.*?[0-9]).{6,}$";
+    //Password Strength Validate
+    if (!password.match(passwordRegex)) {
+      setError(
+        "Password must be at least 6 characters long and contain at least one letter, & one number "
+      );
+      return;
+    }
+
+    logIn(email, password)
+      .then((res) => {
+        const user = res.user;
+        setError("");
+        setLoding(true);
+        form.reset();
+        console.log(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoding(false);
+        setError("Faild to Log In!");
+      });
   };
 
   return (
-    <div className="section py-16">
+    <div className="section py-16 sm:w-[36rem]">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-bold text-center text-teal uppercase">
           Log In
         </h1>
         <form className="mt-6">
-          {fields.map((field) => (
-            <FormInput
-              key={field.id}
-              handleChange={handleChange}
-              value={loginState[field.id]}
-              labelText={field.labelText}
-              labelFor={field.labelFor}
-              id={field.id}
-              name={field.name}
-              type={field.type}
-              isRequired={field.isRequired}
-              placeholder={field.placeholder}
-            />
-          ))}
-          <a href="/" className="text-xs text-teal hover:underline">
+          <FormInput
+            required
+            type="email"
+            labelText="Your Email"
+            labelFor="email"
+            placeholder="Enter Your Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <FormInput
+            required
+            type="password"
+            labelText="Your Password"
+            labelFor="password"
+            placeholder="Enter Your Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <Link
+            to="/forget-password"
+            className="text-xs text-teal hover:underline"
+          >
             Forget Password?
-          </a>
-          <FormAction handleSubmit={handleSubmit} text="Login" />
+          </Link>
+
+          {error && <p className="text-sm font-medium text-red-500">{error}</p>}
+
+          <FormAction
+            disabled={loding}
+            handleSubmit={handleSubmit}
+            text="Login"
+          />
         </form>
 
         <div className="relative flex items-center justify-center w-full mt-8 border border-t">

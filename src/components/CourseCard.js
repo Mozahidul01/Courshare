@@ -36,7 +36,7 @@ export default function CourseCard({
           </p>
           <Link
             to={home ? `courses/${title} ` : `${title}`}
-            className="btn-secondary"
+            className="btn-more"
           >
             See details
           </Link>

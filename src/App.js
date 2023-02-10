@@ -1,61 +1,7 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./Layouts/Root";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Instructor from "./pages/Instructor";
-import Courses from "./pages/Courses";
-import Dashboard from "./pages/Dashboard";
-import SignUp from "./pages/SignUp";
-import LogIn from "./pages/LogIn";
-import NotFound from "./pages/NotFound";
-import Maintenance from "./components/Maintenance";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Layouts/routes";
 
 export default function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root />,
-      errorElement: <NotFound />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "about",
-          element: <About />,
-        },
-        {
-          path: "instructor",
-          element: <Instructor />,
-        },
-        {
-          path: "instructor/:name",
-          element: <Maintenance />,
-        },
-        {
-          path: "courses",
-          element: <Courses />,
-        },
-        {
-          path: "courses/:tittle",
-          element: <Maintenance />,
-        },
-        {
-          path: "dashboard",
-          element: <Dashboard />,
-        },
-        {
-          path: "sign-up",
-          element: <SignUp />,
-        },
-        {
-          path: "log-in",
-          element: <LogIn />,
-        },
-      ],
-    },
-  ]);
   return (
     <div className="font-Poppins bg-solitude">
       <RouterProvider router={router} />

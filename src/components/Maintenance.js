@@ -15,10 +15,7 @@ export default function Maintenance() {
           </p>
         </div>
         <center className="pt-8">
-          <Link
-            to="/"
-            className="text-gray border border-gray text-xl bg-gray-200 py-2 px-4 rounded-md cursor-pointer  transition-all duration-300 hover:shadow-md hover:bg-gray hover:text-solitude"
-          >
+          <Link to="/" className="btn-more">
             Go Home
           </Link>
         </center>

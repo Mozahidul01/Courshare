@@ -8,7 +8,7 @@ export default function FormAction({
     <>
       {type === "Button" && (
         <div className="mt-6">
-          <button type={action} className="form-btn" onSubmit={handleSubmit}>
+          <button type={action} className="form-btn" onClick={handleSubmit}>
             {text}
           </button>
         </div>

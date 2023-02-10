@@ -39,10 +39,10 @@ export default function HeroContainer() {
             and lifetime access.
           </p>
           <div className="mt-6">
-            <Link to="log-in" className="btn-primary">
+            <Link to="sign-up" className="btn-action">
               Get Started
             </Link>
-            <Link to="courses" className="btn-secondary">
+            <Link to="courses" className="btn-more">
               Discover
             </Link>
           </div>

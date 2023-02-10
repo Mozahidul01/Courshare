@@ -9,7 +9,7 @@ export default function CTAContainer({
   ctaImg,
 }) {
   return (
-    <div className="container flex items-center gap-4 shadow-lg rounded-md pl-8 bg-gradient-to-r from-white to-hummingBird">
+    <div className="container flex items-center gap-4 shadow-xl rounded-md pl-8 bg-gradient-to-r from-white to-hummingBird">
       <div className="container py-4">
         <p className="text-sm text-teal uppercase font-medium tracking-wide mb-2">
           {subtitle}

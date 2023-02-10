@@ -24,19 +24,19 @@
     animation: mymove 2.5s infinite;
   }
 
-  .btn-primary {
+  .btn-action {
     @apply px-6 py-3 mr-4 text-sm transition-all text-white font-semibold bg-teal rounded-md;
   }
 
-  .btn-primary:hover {
+  .btn-action:hover {
     @apply bg-hummingBird text-black;
   }
 
-  .btn-secondary {
-    @apply font-semibold px-6 py-2.5 rounded-md border border-gray text-sm transition-all ease-out duration-300;
+  .btn-more {
+    @apply font-semibold px-6 py-2.5 rounded-md border text-sm transition-all ease-out duration-300;
   }
 
-  .btn-secondary:hover {
+  .btn-more:hover {
     @apply bg-gray text-white ring-2 ring-offset-2 ring-gray;
   }
 
