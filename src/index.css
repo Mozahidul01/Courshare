@@ -13,9 +13,6 @@
     @apply container mx-auto px-4
   }
 
-  .animate-slide:hover {
-    animation-play-state: paused;
-  }
 }
 
 @layer components {

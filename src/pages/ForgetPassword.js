@@ -7,10 +7,13 @@ import FormInput from "../components/FormInput";
 export default function ForgetPassword() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const [loding, setLoding] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    try {
+      e.preventDefault();
+    } catch (error) {
+      setError(error);
+    }
   };
 
   return (
@@ -37,11 +40,7 @@ export default function ForgetPassword() {
 
           {error && <p className="text-sm font-medium text-red-500">{error}</p>}
 
-          <FormAction
-            disabled={loding}
-            handleSubmit={handleSubmit}
-            text="Submit"
-          />
+          <FormAction handleSubmit={handleSubmit} text="Submit" />
         </form>
       </div>
     </div>
