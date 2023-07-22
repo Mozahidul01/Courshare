@@ -2,14 +2,15 @@
 
 ## Table of contents
 
-- [Overview](#overview)
-- [The challenge](#the-challenge)
-- [Links](#links)
-- [Built with](#built-with)
-- [What I learned](#what-i-learned)
-- [Future Plan](#future-plan)
-- [Useful resources](#useful-resources)
-- [Author](#author)
+- [Coushare (Online Course Platform)](#coushare-online-course-platform)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Tech Stack](#tech-stack)
+    - [What I learned](#what-i-learned)
+    - [Future Plan](#future-plan)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
 ## Overview
 
@@ -23,20 +24,16 @@ Courseshare is an online course platform that offers a wide range of high-qualit
 - Have to create data and show that on the website
 - Have to use a CSS framework/library
 - Use React Router
+-
 
-### Links
-
-- Solution URL: [https://github.com/programming-hero-web-course2/b6-quiz-crackerz-Mozahidul01]
-
-- Live Site URL: [https://courshare.netlify.app/]
-
-### Built with
+### Tech Stack
 
 - React Js
 - Tailwind CSS
 - React Router
 - React Icons
 - Framer Motion
+- Firebase
 
 ### What I learned
 
@@ -55,6 +52,6 @@ In the future, I'll add a few features. Users will eventually be able to take qu
 
 ## Author
 
-- Website - [https://mozahidul01.showwcase.com/]
+- Website - [https://mozahidul01.netlify.app/]
 - LinkdIn - [https://www.linkedin.com/in/mozahidul01]
 - Github - [https://github.com/mozahidul01]

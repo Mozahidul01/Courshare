@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { HiMenuAlt1, HiOutlineX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../Data/data";
 import MobileNavlinks from "./MobileNavlinks";
 import NavLinks from "./NavLinks";
@@ -11,10 +11,16 @@ import UserModal from "./UserModal";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
+  const location = useLocation();
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
+  //change scroll position on changing location
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   //User Data From Context API
   const { user } = useContext(AuthContext);
@@ -33,19 +39,28 @@ export default function Header() {
         </div>
         <div className="md:flex items-center hidden">
           {navLinks.map((navLink) => (
-            <NavLinks key={navLink.id} {...navLink} />
+            <NavLinks
+              key={navLink.id}
+              {...navLink}
+            />
           ))}
         </div>
 
         {user?.email ? (
           <div className="relative">
-            <label htmlFor="my-modal" className="cursor-pointer">
+            <label
+              htmlFor="my-modal"
+              className="cursor-pointer"
+            >
               <FaUserCircle className="w-7 h-7" />
             </label>
             <UserModal />
           </div>
         ) : (
-          <Link to="log-in" className="btn-action">
+          <Link
+            to="log-in"
+            className="btn-action"
+          >
             Log In
           </Link>
         )}
