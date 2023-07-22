@@ -1,7 +1,7 @@
 import Maintenance from "../components/Maintenance";
 
-export default function Dashboard() {
-  return (
+export default function Profile() {
+	return (
 		<div>
 			<Maintenance />
 		</div>
