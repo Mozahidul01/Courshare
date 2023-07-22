@@ -7,7 +7,8 @@ export default function PrivateRoute({ children }) {
 
 	if (loading) {
 		return <button className='btn btn-lg btn-ghost btn-square loading' />;
-	} else if (!loading && user.uid) {
+	}
+	if (!loading && user.uid) {
 		return children;
 	}
 	return <Navigate to='/log-in' />;
