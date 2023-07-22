@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FaGoogle, FaFacebookF, FaGithub } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../contexts/UserContex";
 
 export default function FormIcons() {
