@@ -20,8 +20,6 @@ export default function SignUp() {
   const handleSubmit = (e) => {
 		e.preventDefault();
 
-		const form = e.target;
-
 		//Input fields validate
 		if (!username || !email || !password || !confirmPassword) {
 			setError("All fields are required");

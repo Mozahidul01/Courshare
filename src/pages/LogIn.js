@@ -18,7 +18,6 @@ export default function LogIn() {
 
   const handleSubmit = (e) => {
 		e.preventDefault();
-		const form = e.target;
 
 		//Input fields validate
 		if (!email || !password) {
